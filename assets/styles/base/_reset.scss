@@ -8,10 +8,15 @@
   padding: 0;
   border: 0;
   font-size: 100%;
+  background: none;
 }
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.7rem;
 }
 a {
   text-decoration: none;
