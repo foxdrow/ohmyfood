@@ -1,0 +1,22 @@
+/*----------------- RESET ---------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*------------------- FONT-FAMILY -------------------*/
+
