@@ -206,4 +206,32 @@ header .location-bar {
 header .location-bar .location-title {
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 2.2rem 2.5rem;
+  gap: 1.6rem;
+}
+.footer-logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.footer-item {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+}
+.footer .with-icon {
+  display: flex;
+  gap: 0.7rem;
 }/*# sourceMappingURL=styles.css.map */

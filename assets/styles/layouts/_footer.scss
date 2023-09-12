@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-3;
+    padding: 2.2rem 2.5rem;
+    gap: 1.6rem;
+    &-logo {
+        font-family: "Shrikhand", cursive;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #fff;
+    }
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    &-item {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #fff;
+    }
+    .with-icon {
+        display: flex;
+        gap: 0.7rem;
+    }
+}
