@@ -135,12 +135,16 @@ p {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 8rem 2rem;
 }
 .restaurants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding-top: 2rem;
 }
 .restaurants-list .restaurants-item {
+  position: relative;
   width: 100%;
   background-color: #fff;
   border-radius: 15px;
@@ -164,6 +168,22 @@ p {
 }
 .restaurants-list .restaurants-item-content-like {
   margin-right: 1.3rem;
+}
+.restaurants-list .restaurants-item:nth-child(1):before, .restaurants-list .restaurants-item:nth-child(2):before {
+  content: "Nouveau";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background: #99e2d0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #008766;
+  width: 8rem;
+  height: 2.9rem;
+  margin: 1.5rem;
 }
 
 header .header-nav {

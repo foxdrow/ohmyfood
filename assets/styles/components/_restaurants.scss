@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
   background-color: $color-bg-2;
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 8rem 2rem;
 
   &-title {
   }
   &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     padding-top: 2rem;
     .restaurants-item {
+      position: relative;
       width: 100%;
       background-color: #fff;
       border-radius: 15px;
@@ -34,6 +38,22 @@
         &-like {
             margin-right: 1.3rem;
         }
+      }
+      &:nth-child(1):before, &:nth-child(2):before {
+        content: 'Nouveau';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        background: $color-tertiary;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $color-text-green;
+        width: 8rem;
+        height: 2.9rem;
+        margin: 1.5rem;
       }
     }
   }
