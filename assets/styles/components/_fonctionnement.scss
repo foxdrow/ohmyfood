@@ -17,9 +17,20 @@
     border-radius: 20px;
     padding: 2.8rem 3.8rem 2.8rem 0;
     gap: 2rem;
+    i {
+      color: #7e7e7e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &:nth-child(3) i {
+      color: $color-primary;
+    }
     p {
         font-size: 1.6rem;
         font-weight: 500;
+        display: flex;
+        align-items: flex-end;
     }
     &::before {
       content: "1";

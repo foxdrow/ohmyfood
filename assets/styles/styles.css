@@ -68,7 +68,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem 6.5rem 2rem;
-  background: #F6F6F6;
+  background: hsl(0, 0%, 96%);
 }
 .hero-title {
   margin-bottom: 1.4rem;
@@ -98,15 +98,26 @@ p {
 .fonctionnement-item {
   display: flex;
   flex-direction: row;
-  background-color: #F6F6F6;
+  background-color: hsl(0, 0%, 96%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   padding: 2.8rem 3.8rem 2.8rem 0;
   gap: 2rem;
 }
+.fonctionnement-item i {
+  color: #7e7e7e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement-item:nth-child(3) i {
+  color: #9356dc;
+}
 .fonctionnement-item p {
   font-size: 1.6rem;
   font-weight: 500;
+  display: flex;
+  align-items: flex-end;
 }
 .fonctionnement-item::before {
   content: "1";
@@ -134,7 +145,7 @@ p {
 .restaurants {
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
+  background-color: hsl(0, 0%, 96%);
   padding: 5rem 2rem 8rem 2rem;
 }
 .restaurants-list {
@@ -168,6 +179,20 @@ p {
 }
 .restaurants-list .restaurants-item-content-like {
   margin-right: 1.3rem;
+}
+.restaurants-list .restaurants-item-content-like i {
+  color: #000;
+  height: 25.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurants-list .restaurants-item-content-like i:hover {
+  font-weight: bold;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurants-list .restaurants-item:nth-child(1):before, .restaurants-list .restaurants-item:nth-child(2):before {
   content: "Nouveau";
@@ -207,6 +232,9 @@ header .location-bar .location-title {
   font-size: 1.6rem;
   font-weight: 400;
 }
+header .location-bar i {
+  color: #353535;
+}
 
 .footer {
   display: flex;
@@ -234,4 +262,10 @@ header .location-bar .location-title {
 .footer .with-icon {
   display: flex;
   gap: 0.7rem;
+}
+.footer i {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */
