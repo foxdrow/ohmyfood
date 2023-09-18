@@ -4,8 +4,15 @@ header {
     justify-content: center;
     align-items: center;
     height: 6.3rem;
+    @media (min-width: 1024px) {
+      padding: 5rem 0;
+    }
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    // box-shadow: 0px 6px 15px 8px #000000
+  }
+  .header-logo {
+    @media (min-width: 1080px) {
+      font-size: 3.7rem;
+    }
   }
   .location-bar {
     height: 4.6rem;
@@ -17,11 +24,11 @@ header {
     margin-top: 0.4rem;
     padding-bottom: 0.2rem;
     .location-title {
-        font-size: 1.6rem;
-        font-weight: 400;
+      font-size: 1.6rem;
+      font-weight: 400;
     }
     i {
-        color: $color-bg-3;
+      color: $color-bg-3;
     }
   }
 }
