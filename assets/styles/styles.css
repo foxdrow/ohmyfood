@@ -37,6 +37,11 @@ section {
   max-width: 1080px;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
   font-size: 3rem;
@@ -82,7 +87,7 @@ p {
   }
 }
 .hero {
-  background: hsl(0, 0%, 96%);
+  background: #f6f6f6;
 }
 .hero-container {
   display: flex;
@@ -119,6 +124,17 @@ p {
   }
 }
 
+.hero-image-img {
+  width: 100%;
+  height: 100%;
+  min-height: 27.5rem;
+  max-height: 40rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .fonctionnement-container {
   display: flex;
   flex-direction: column;
@@ -145,7 +161,7 @@ p {
 .fonctionnement-item {
   display: flex;
   flex-direction: row;
-  background-color: hsl(0, 0%, 96%);
+  background-color: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   padding: 2.5rem 3.8rem 2.5rem 0;
@@ -195,7 +211,7 @@ p {
 }
 
 .restaurants {
-  background-color: hsl(0, 0%, 96%);
+  background-color: #f6f6f6;
 }
 .restaurants-container {
   display: flex;
@@ -287,6 +303,96 @@ p {
   margin: 1.5rem;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  position: relative;
+  top: -4rem;
+  border-radius: 3.5rem 3.5rem 0 0;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+  gap: 3rem;
+  margin-bottom: -3.5rem;
+  width: 100%;
+  max-width: 105.5rem;
+  align-self: center;
+}
+.menu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;
+  margin: 1rem 0;
+}
+.menu-title h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+.menu-title i {
+  color: #000;
+  height: 25.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.7rem;
+}
+.menu-title i:hover {
+  font-weight: bold;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu-container {
+  width: 100%;
+  max-width: 65rem;
+}
+.menu-container-title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+.menu-container-title:before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  bottom: 0;
+  border-bottom: 3px solid #99e2d0;
+}
+.menu-container-item {
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.3rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.menu-container-item-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.menu-container-item-description {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.menu-container-item-price {
+  display: flex;
+  align-items: end;
+}
+.menu-container-item-price-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.menu-button {
+  padding: 1.6rem 4.8rem;
+}
+
 header .header-nav {
   display: flex;
   justify-content: center;
@@ -321,6 +427,9 @@ header .location-bar .location-title {
 header .location-bar i {
   color: #353535;
 }
+header .no-shadow {
+  box-shadow: none;
+}
 
 .footer {
   display: flex;
@@ -328,6 +437,14 @@ header .location-bar i {
   background-color: #353535;
   padding: 2.2rem 2.5rem;
   gap: 1.6rem;
+}
+@media (min-width: 1080px) {
+  .footer {
+    flex-direction: row-reverse;
+    gap: 10rem;
+    padding-right: 10vw;
+    padding-top: 6rem;
+  }
 }
 .footer-logo {
   font-family: "Shrikhand", cursive;
@@ -339,6 +456,13 @@ header .location-bar i {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+}
+@media (min-width: 1080px) {
+  .footer-list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+  }
 }
 .footer-item {
   font-size: 1.6rem;

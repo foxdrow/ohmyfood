@@ -1,33 +1,44 @@
 .footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg-3;
+  padding: 2.2rem 2.5rem;
+  gap: 1.6rem;
+  @media (min-width: 1080px) {
+    flex-direction: row-reverse;
+    gap: 10rem;
+    padding-right: 10vw;
+    padding-top: 6rem;
+  }
+  &-logo {
+    font-family: "Shrikhand", cursive;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+  }
+  &-list {
     display: flex;
     flex-direction: column;
-    background-color: $color-bg-3;
-    padding: 2.2rem 2.5rem;
-    gap: 1.6rem;
-    &-logo {
-        font-family: "Shrikhand", cursive;
-        font-size: 1.8rem;
-        font-weight: 400;
-        color: #fff;
+    gap: 0.7rem;
+    @media (min-width: 1080px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 4rem;
     }
-    &-list {
-        display: flex;
-        flex-direction: column;
-        gap: 0.7rem;
-    }
-    &-item {
-        font-size: 1.6rem;
-        font-weight: 300;
-        color: #fff;
-    }
-    .with-icon {
-        display: flex;
-        gap: 0.7rem;
-    }
-    i {
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  }
+  &-item {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+  }
+  .with-icon {
+    display: flex;
+    gap: 0.7rem;
+  }
+  i {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
