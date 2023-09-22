@@ -1,0 +1,34 @@
+@mixin like-animation_hover {
+  font-weight: bold;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  // -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin like-animation {
+  animation: like-anim-out ease 0.5s;
+  &:hover {
+    cursor: pointer;
+    @include like-animation_hover;
+    animation: like-anim-in ease 0.7s;
+  }
+}
+@keyframes like-anim-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    @include like-animation_hover;
+    opacity: 1;
+  }
+}
+@keyframes like-anim-out {
+  0% {
+    @include like-animation_hover;
+    opacity: 1;
+  }
+  100% {
+    @include like-animation_hover;
+    opacity: 0;
+  }
+}
