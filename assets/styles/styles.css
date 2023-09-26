@@ -8,7 +8,6 @@
     font-weight: bold;
     background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
   }
@@ -18,7 +17,6 @@
     font-weight: bold;
     background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
   }
@@ -26,9 +24,26 @@
     font-weight: bold;
     background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
+  }
+}
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-right-green-block {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5.9rem;
   }
 }
 /*----------------- RESET ---------------*/
@@ -73,16 +88,6 @@ body {
   flex-direction: column;
 }
 
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 h1 {
   font-family: "Shrikhand", cursive;
   font-size: 3rem;
@@ -238,7 +243,6 @@ p {
 .fonctionnement-item:hover i {
   transition: all 0.5s ease-in-out;
   color: #9356dc;
-  scale: 1.2;
 }
 .fonctionnement-item p {
   font-size: 1.6rem;
@@ -344,7 +348,6 @@ p {
   font-weight: bold;
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: like-anim-in ease 0.7s;
 }
@@ -417,7 +420,6 @@ p {
   font-weight: bold;
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: like-anim-in ease 0.7s;
 }
@@ -433,13 +435,6 @@ p {
   padding-bottom: 0.7rem;
   margin-bottom: 1.2rem;
 }
-.menu-container-title:before {
-  content: "";
-  position: absolute;
-  width: 4rem;
-  bottom: 0;
-  border-bottom: 3px solid #99e2d0;
-}
 .menu-container-item {
   background-color: #fff;
   margin-bottom: 1.5rem;
@@ -450,13 +445,22 @@ p {
   border-radius: 1.5rem;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
 }
+.menu-container-item:hover .menu-container-item-content {
+  max-width: 70%;
+}
 .menu-container-item-title {
   font-size: 1.8rem;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu-container-item-description {
   font-size: 1.5rem;
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu-container-item-price {
   display: flex;
@@ -466,17 +470,67 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.menu-container:first-child {
-  animation: slide-down 1s 0.3s both;
+.menu-container-item:nth-child(2):hover:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  margin-bottom: 1.5rem;
+  height: 6.45rem;
+  width: 5.9rem;
+  background-color: #99e2d0;
+  border-radius: 0 1.5rem 1.5rem 0;
+  animation: slide-right-green-block 0.3s 0.1s both;
+  top: 3.8rem;
+}
+.menu-container-item:nth-child(2):hover div:nth-child(2) {
+  animation: slide-right-price 0.3s 0.1s both;
+}
+.menu-container .menu-container-item:nth-child(3):hover:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  margin-bottom: 1.5rem;
+  height: 6.45rem;
+  width: 5.9rem;
+  background-color: #99e2d0;
+  border-radius: 0 1.5rem 1.5rem 0;
+  animation: slide-right-green-block 0.3s 0.1s both;
+  top: 11.75rem;
+}
+.menu-container .menu-container-item:nth-child(3):hover div:nth-child(2) {
+  animation: slide-right-price 0.3s 0.1s both;
+}
+.menu-container .menu-container-item:nth-child(4):hover:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  margin-bottom: 1.5rem;
+  height: 6.45rem;
+  width: 5.9rem;
+  background-color: #99e2d0;
+  border-radius: 0 1.5rem 1.5rem 0;
+  animation: slide-right-green-block 0.3s 0.1s both;
+  top: 19.7rem;
+}
+.menu-container .menu-container-item:nth-child(4):hover div:nth-child(2) {
+  animation: slide-right-price 0.3s 0.1s both;
+}
+@keyframes slide-right-price {
+  0% {
+    margin-right: 0;
+  }
+  100% {
+    margin-right: 5.9rem;
+  }
 }
 .menu-container:nth-child(2) {
-  animation: slide-down 1s 0.6s both;
+  animation: slide-down 1s 0.3s both;
 }
 .menu-container:nth-child(3) {
-  animation: slide-down 1s 0.9s both;
+  animation: slide-down 1s 0.6s both;
 }
 .menu-container:nth-child(4) {
-  animation: slide-down 1s 1.2s both;
+  animation: slide-down 1s 0.9s both;
 }
 .menu-button {
   padding: 1.6rem 4.8rem;

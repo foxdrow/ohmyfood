@@ -1,8 +1,8 @@
 @mixin like-animation_hover {
   font-weight: bold;
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-  background-clip: text;
-  // -webkit-background-clip: text;
+  // background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @mixin like-animation {
@@ -40,5 +40,26 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@mixin green-block {
+  content: "";
+  position: absolute;
+  right: 0;
+  margin-bottom: 1.5rem;
+  height: 6.45rem;
+  width: 5.9rem;
+  background-color: $color-tertiary;
+  border-radius: 0 1.5rem 1.5rem 0;
+  animation: slide-right-green-block 0.3s 0.1s both;
+}
+
+@keyframes slide-right-green-block {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5.9rem;
   }
 }
