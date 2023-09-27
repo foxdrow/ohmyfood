@@ -43,23 +43,20 @@
   }
 }
 
-@mixin green-block {
-  content: "";
-  position: absolute;
-  right: 0;
-  margin-bottom: 1.5rem;
-  height: 6.45rem;
-  width: 5.9rem;
-  background-color: $color-tertiary;
-  border-radius: 0 1.5rem 1.5rem 0;
-  animation: slide-right-green-block 0.3s 0.1s both;
-}
-
 @keyframes slide-right-green-block {
   0% {
     width: 0;
   }
   100% {
     width: 5.9rem;
+  }
+}
+
+@keyframes slide-right-green-block-check {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2rem;
   }
 }
