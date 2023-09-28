@@ -666,7 +666,7 @@ header .no-shadow {
   padding: 2.2rem 2.5rem;
   gap: 1.6rem;
 }
-@media (min-width: 1080px) {
+@media (min-width: 950px) {
   .footer {
     flex-direction: row-reverse;
     gap: 10rem;
@@ -685,7 +685,7 @@ header .no-shadow {
   flex-direction: column;
   gap: 0.7rem;
 }
-@media (min-width: 1080px) {
+@media (min-width: 680px) {
   .footer-list {
     flex-direction: row;
     justify-content: space-between;
