@@ -1,7 +1,6 @@
 @mixin like-animation_hover {
   font-weight: bold;
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-  // background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
