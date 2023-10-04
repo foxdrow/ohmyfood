@@ -21,6 +21,10 @@ header {
       left: 2.5rem;
     }
   }
+  input[type="text"]:focus {
+    border: none;
+    outline: none;
+  }
   .location-bar {
     height: 4.6rem;
     display: flex;
@@ -33,6 +37,10 @@ header {
     .location-title {
       font-size: 1.6rem;
       font-weight: 400;
+      width: 12rem;
+      &::placeholder {
+        color: $color-bg-3;
+      }
     }
     i {
       color: $color-bg-3;
